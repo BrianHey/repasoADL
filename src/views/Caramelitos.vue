@@ -5,6 +5,10 @@
   <button @click="cambioValor">Cambio de valor</button>
 
   <p v-for="(horoscopo, index) in horoscopos" :key="index">{{horoscopo.nombre}}</p>
+  <div>
+    <img :src="user.foto_url" alt="image">
+</div>
+<h4>Nombre: {{user.fullName}}</h4>
 </div>
 </template>
 
@@ -16,7 +20,7 @@ import {
 
 export default {
   computed: {
-    ...mapState(["variable1", "horoscopos"]),
+    ...mapState(["variable1", "user", "horoscopos"]),
     cambiarVariable1() {
       return this.variable1 ? "1" : "2";
     },
@@ -29,3 +33,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+  img{
+    border-radius: 1rem;
+  }
+</style>

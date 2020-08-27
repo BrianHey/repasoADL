@@ -32,7 +32,7 @@ export default new Vuex.Store({
 
         let payload = {
           fullName: `${user.name.title} ${user.name.first} ${user.name.last} `,
-          foto_url: user.picture.medium,
+          foto_url: user.picture.large,
         }
         commit('SET_USER', payload)
       })

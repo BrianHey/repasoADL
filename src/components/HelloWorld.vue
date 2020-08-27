@@ -11,6 +11,7 @@ export default {
     msg: String,
     ruta: String,
   },
+  methods: {},
 };
 </script>
 

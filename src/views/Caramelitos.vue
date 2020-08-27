@@ -29,6 +29,9 @@ export default {
     ...mapActions(["cambioValor", "llamarApi", "llamarHoroscopos"]),
   },
   created() {
+  this.llamarApi();
+  },
+  mounted(){
     this.llamarHoroscopos();
   },
 };

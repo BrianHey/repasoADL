@@ -40,6 +40,7 @@ export default new Vuex.Store({
 
     llamarHoroscopos({ commit }) {
       axios.get('https://api.xor.cl/tyaas/').then((data) => {
+        console.log(data.data)
         let res = data.data.horoscopo
         let miDataHoroscopo = Object.values(res)
         commit('SET_HOROSCOPOS', miDataHoroscopo)

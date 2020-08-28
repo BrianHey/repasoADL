@@ -1,46 +1,37 @@
 <template>
-<div>
-  <div class="wrapper cartas px-5">
-    <div v-for=" (signo,i) of horoscopos" :key="i">
-      <b-card no-body style="max-width: 20rem;" img-src="https://placekitten.com/380/200" img-alt="Image" img-top>
-        <template v-slot:header>
-          <h4 class="mb-0">Hello World</h4>
-        </template>
+  <div>
+    <div class="wrapper cartas px-5">
+      <div class="row">
+        <div class="col-md-3 " v-for="(signo, i) of horoscopos" :key="i">
+          <b-card no-body style="max-width: 20rem;" :img-src="imagenGenerica" img-alt="Image" img-top>
+            <template v-slot:header>
+              <h4 class="mb-0">{{ signo.nombre }}</h4>
+            </template>
 
-        <b-card-body>
-          <b-card-title>Card Title</b-card-title>
-          <b-card-sub-title class="mb-2">Card Sub Title</b-card-sub-title>
-          <b-card-text>
-            Some quick example text to build on the card title and make up the bulk of the card's
-            content.
-          </b-card-text>
-        </b-card-body>
+            <b-card-body>
+              <b-card-title>Amor</b-card-title>
+              <b-card-text>{{ signo.amor }}</b-card-text>
+            </b-card-body>
 
-        <b-list-group flush>
-          <b-list-group-item>Cras justo odio</b-list-group-item>
-          <b-list-group-item>Dapibus ac facilisis in</b-list-group-item>
-          <b-list-group-item>Vestibulum at eros</b-list-group-item>
-        </b-list-group>
+            <b-card-body>
+              <b-card-title>Dinero</b-card-title>
+              <b-card-text>{{ signo.dinero }}</b-card-text>
+            </b-card-body>
 
-        <b-card-body>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </b-card-body>
-
-        <b-card-footer>This is a footer</b-card-footer>
-
-        <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
-      </b-card>
+            <b-list-group flush>
+              <b-list-group-item>{{ signo.fechaSigno }}</b-list-group-item>
+              <b-list-group-item>{{ signo.color }}</b-list-group-item>
+              <b-list-group-item>Numero: {{ signo.numero }}</b-list-group-item>
+            </b-list-group>
+          </b-card>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import {
-  mapState,
-  mapActions
-} from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   computed: {

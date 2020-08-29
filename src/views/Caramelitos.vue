@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 <div>
   <div class="pb-5">
     <input type="date" />
@@ -43,6 +44,27 @@
             <b-list-group-item>Numero: {{ signo.numero }}</b-list-group-item>
           </b-list-group>
         </b-card>
+=======
+  <div>
+    <h1>holaaaa</h1>
+    <div class="wrapper cartas px-5">
+      <div class="row">
+        <div class="col-md-3 " v-for="(curso, i) of cursos" :key="i">
+          <b-card
+            :title="curso.nombre"
+            :img-src="curso.cover"
+            img-alt="Image"
+            img-top
+            tag="article"
+            style="max-width: 20rem;"
+            class="mb-2"
+          >
+            <b-card-text> </b-card-text>
+
+            <b-button href="#" variant="primary">Go somewhere</b-button>
+          </b-card>
+        </div>
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
       </div>
     </div>
   </div>
@@ -57,24 +79,36 @@ import {
 
 export default {
   computed: {
+<<<<<<< HEAD
     ...mapState(["variable1", "user", "horoscopos", "cursos"]),
+=======
+    ...mapState(["variable1", "user", "cursos"]),
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
     cambiarVariable1() {
       return this.variable1 ? "1" : "2";
     },
   },
   data() {
     return {
-      imagenGenerica: "https://estaticos.elperiodico.com/resources/jpg/8/2/signos-del-zodiaco-del-horoscopo-diario-1568735910628.jpg",
+      imagenGenerica:
+        "https://estaticos.elperiodico.com/resources/jpg/8/2/signos-del-zodiaco-del-horoscopo-diario-1568735910628.jpg",
     };
   },
   methods: {
+<<<<<<< HEAD
     ...mapActions(["cambioValor", "llamarApi", "llamarHoroscopos", "llamarCursos"]),
+=======
+    ...mapActions(["cambioValor", "llamarApi", "llamarCursos"]),
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
   },
   created() {
     this.llamarApi();
   },
   mounted() {
+<<<<<<< HEAD
     this.llamarHoroscopos();
+=======
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
     this.llamarCursos();
   },
 };

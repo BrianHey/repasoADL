@@ -7,7 +7,10 @@ export default new Vuex.Store({
   state: {
     variable1: true,
     user: {},
+<<<<<<< HEAD
     horoscopos: [],
+=======
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
     cursos: [],
   },
   mutations: {
@@ -17,9 +20,12 @@ export default new Vuex.Store({
     SET_USER(state, newuser) {
       state.user = newuser;
     },
+<<<<<<< HEAD
     SET_HOROSCOPOS(state, horoscopos) {
       state.horoscopos = horoscopos;
     },
+=======
+>>>>>>> 6355648a8051826cee967502277dc83c6c46a6ad
     SET_CURSOS(state, cursos) {
       state.cursos = cursos;
     },
